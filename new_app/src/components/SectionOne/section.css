@@ -1,0 +1,167 @@
+.firstText{
+    color: rgb(55, 138, 55);
+  margin: 15% 4% 8% 4%;
+    font-size: 30px;
+}
+
+.secondText{
+    margin-left: 6%;
+font-size: 30px;
+color: rgb(55, 138, 55);
+}
+
+.formDiv{
+    margin: 8% 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    height: 45px;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.horizontal{
+ display: flex;
+}
+
+hr{
+    width: 45%;
+}
+
+label{
+    margin-top: 7%;
+}
+
+.lastbutton{
+    margin: 25% 0 10% 0;
+    padding: 4% 0;
+    font-size: large;
+    background-color: rgba(0, 128, 0, 0.089);
+    border: 1px solid;
+    border-radius: 5px;
+    opacity: 50%;
+    width: 100%;
+}
+
+.lastText{
+   text-align: center;
+   margin-bottom: 20%;
+}
+
+button{
+    height: 50px;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: white;
+    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 5px;
+}
+
+.email{
+    border:1px solid;
+}
+
+.firstDiv{
+    flex: 0.7;
+}
+
+.lastText a{
+    color: blue;
+    text-decoration: none;
+}
+
+.img_text{
+    display: none;
+}
+
+
+@media (min-width: 768px){
+    .secondDiv{
+        background-image: url(/src/images/realmongo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        flex: 2;
+    }
+
+    .secondText{
+        margin-left: 6%;
+    font-size: 35px;
+    color: rgb(55, 138, 55);
+    }
+
+    button{
+        margin: 0 auto;
+        width: 90%;
+        height: 50px;
+        border-radius: 5px;
+        font-size: medium;
+        background-color: white;
+        border: 1px solid;
+        box-shadow: rgba(0, 0, 0, 0.16) 1px 2px 5px;
+    }
+
+    input{
+        margin: 0 auto;
+        height: 45px;
+        width: 90%;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .lastbutton{
+        margin:0 4%;
+        padding:0;
+        /* font-size: medium; */
+        background-color: rgba(0, 128, 0, 0.089);
+        border: 1px solid;
+        border-radius: 5px;
+        opacity: 50%;
+        width: 25%;
+        height: 30px;
+    }
+    
+    .buttom{
+        display: flex;
+        margin-top: 15%;
+    }
+
+    hr{
+        width: 35%;
+    }
+    label{
+        margin-top: 7%;
+        margin-left: 5%;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    .lastText a{
+        color: blue;
+        text-decoration: none;
+        font-size: small;
+
+    }
+
+    .img_text{
+        display: block;
+        padding: 5%;
+        color: white;
+        width: 30%;
+    }
+
+    .img_text a{
+        color: white ;
+    }
+}
