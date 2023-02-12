@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Input } from "../Input/Input";
 import "./Form.css";
 
-export const Form = () => {
+export const Form = ({func}) => {
+console.log(func)
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  console.log(name)
-  console.log(password)
+//   console.log(name)
+//   console.log(password)
 
   function nameHandler(e){
     setName(e.target.value)
@@ -40,7 +41,7 @@ export const Form = () => {
 
       <button>LOGIN</button>
 
-      <a href="/">SIGN UP</a>
+      <span onClick={()=>func(false)}>SIGN UP</span>
     </form>
   );
 };

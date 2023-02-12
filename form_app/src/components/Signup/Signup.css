@@ -1,0 +1,19 @@
+.form{
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    height: 500px;
+}
+
+h1{
+    text-align: center;
+}
+
+.formDiv{
+display: flex;
+flex-direction: column;
+    gap: 10px;
+}
+
+button{
+    color: white;
+}
