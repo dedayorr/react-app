@@ -1,0 +1,12 @@
+h1{
+color: aqua;
+font-size: x-large;
+}
+
+form{
+    padding: 2%;
+    margin: 0 auto;
+    width: 40%;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
