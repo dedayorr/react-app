@@ -1,0 +1,15 @@
+.container{
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px){
+  .mapped{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* column-gap: 20px; */
+  }
+}
+

@@ -1,0 +1,47 @@
+
+h1{
+    text-align: center;
+  }
+  
+  .input{
+    margin: 40px auto;
+    width: 90%;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(246, 246, 241);
+    justify-content: space-between;
+    padding: 2%;
+    
+  }
+  
+  input{
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+  }
+  
+  img{
+    width: 100%;
+  }
+  
+  .movie{
+    background-color: black;
+    width: 90%;
+    /* height: 100%; */
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
+  }
+  
+  h3{
+    color: rgba(255, 255, 0, 0.533);
+  }
+
+  .span{
+    padding: 2%;
+  }
+
+ 
