@@ -8,6 +8,7 @@ import { BsGithub } from "react-icons/bs";
 function Section() {
   return (
     <div className="container">
+
       <div className="firstDiv">
         <div className="firstText">
           <SiMongodb />
@@ -34,6 +35,8 @@ function Section() {
           </div>
         </div>
       </div>
+
+{/* background image */}
       <div className="secondDiv">
         <div className="img_text">
           <h1>Discover What's New in MongoDB 6.0</h1>
@@ -44,6 +47,7 @@ function Section() {
           <a href="/">Check out what's new →</a>
         </div>
       </div>
+      
     </div>
   );
 }
