@@ -1,0 +1,22 @@
+.text{
+    text-align: center;
+}
+
+.text > div{
+    font-size: 50px;
+}
+
+@media (min-width:768px){
+.container {
+    display: flex;
+}
+
+.firstSlide{
+    flex: 1.2;
+    margin: 5% 10%;
+}
+
+.secondSlide{
+    flex: 2;
+}
+}

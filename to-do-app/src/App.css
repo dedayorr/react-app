@@ -1,0 +1,21 @@
+.App{
+  background-color: rgba(255, 235, 205, 0.351);
+}
+
+.generalContainer{
+  width: 100%;
+}
+
+@media  (min-width: 768px){
+  .generalContainer{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px){
+  .generalContainer{
+    width: 80%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+    background: rgb(41,18,154);
+    background: linear-gradient(0deg, rgba(41,18,154,1) 29%, rgba(251,221,166,1) 90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:30px;
+    color: aliceblue;
+    padding: 3%;
+}
+
+.container > ul > li > a{
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    margin-right: 40px;
+    transition: 1s all ease-in;
+}
+
+.container > a {
+    text-decoration: none;
+    font-size:  40px;
+    color: aliceblue;
+}
+
+.container > ul {
+    display: flex;
+    list-style: none;
+}
+
+
+
+
+

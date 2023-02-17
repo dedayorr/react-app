@@ -1,0 +1,60 @@
+form{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 85%;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 0% 3% 20%;
+    margin-bottom: 20%;
+    background-color: white;
+}
+
+form > p {
+    font-size: 50px;
+    text-align: center;
+}
+
+input{
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 1%;
+}
+
+button{
+    width: 50%;
+    height: 30px;
+    margin: 0 auto;
+    /* color: orange; */
+    font-size: 15px;
+    background-color: aliceblue;
+    border: none;
+    background: rgb(41,18,154);
+    background: linear-gradient(270deg, rgba(41, 18, 154, 0.698) 34%, rgba(251,221,166,1) 90%);
+    /* border-radius: 10px; */
+}
+
+@media (min-width: 768px){
+    form{
+        width: 70%;
+    }
+
+    input{
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid;
+        padding: 1%;
+    }
+
+    button{
+        margin-top: 20px;
+        height: 50px;
+        font-size: 20px;
+        color: white;
+    }
+
+    button:hover{
+        box-shadow: rgba(0, 0, 0, 0.789) 0px 3px 8px;
+    }
+}
