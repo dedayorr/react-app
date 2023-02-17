@@ -1,11 +1,14 @@
+import React from "react";
+import "./App.css";
+import Colors from "./component/Colors/Colors";
 
-import './App.css';
-import { Form } from './components/Form/Form';
+
 
 function App() {
+
   return (
-    <div className="App">
-   <Form/>
+    <div>
+      <Colors/>
     </div>
   );
 }
