@@ -1,0 +1,17 @@
+.container{
+    position: relative;
+}
+
+.sizes{
+display: flex;
+}
+
+.sizes > div{
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.145);
+    padding: 1%;
+    width: 5%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}

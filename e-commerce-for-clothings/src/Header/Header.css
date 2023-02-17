@@ -1,0 +1,16 @@
+.navBar{
+    background-color: rgba(0, 0, 0, 0.715);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.logo{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #f7f6f1a4;
+}
+
+.cart{
+    color: #f7f6f1a4;
+}

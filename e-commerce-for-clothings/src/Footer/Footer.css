@@ -1,0 +1,8 @@
+.icons{
+    background-color: rgba(0, 0, 0, 0.715);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    color: white;
+    font-size: 40px;
+}
