@@ -1,8 +1,8 @@
 import React from "react";
-import "./SignUp.css";
+import "./AddTask.css";
 import { useState } from "react";
 
-export const SignUp = ({ func }) => {
+export const AddTask = ({ func }) => {
   const [title, setTitle] = useState("");
   const [description, setDesc] = useState("");
 

@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import "./Form.css"
 
 
-const Form = ({func}) => {
+const Form = ({func,reg}) => {
     const [username, setUserName] = useState(""); 
     const [password, setPassword] = useState(""); 
     const [mail, setMail] = useState(""); 
@@ -26,6 +26,7 @@ const Form = ({func}) => {
             <input type="email" value={mail} placeholder="Enter your mail" onChange={mailHandler}/>
             <input type="password" value={password} placeholder="Enter your password" onChange={passwordHandler}/>
             <button onClick={()=> func(false)}>Submit</button>
+<div className='regLink'>Don't have an account? Register here</div>
         </form>
     </div>
   )

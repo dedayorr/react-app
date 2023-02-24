@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import "./HomeSide.css";
 import Form from "../Form/Form";
-import { SignUp } from "../SignUp/SignUp";
+import { AddTask} from "../AddTask/AddTask";
+import Register from "../Register/Register";
 
 const HomeSide = () => {
   const [open, setOpen] = useState(true);
@@ -14,6 +15,14 @@ const HomeSide = () => {
   function handleSignin(data){
     setOpen(data)
 }
+
+// function handleRegister(data){
+//   setDisplay(data)
+// }
+
+// function handleSignin(data){
+// setOpen(data)
+// }
 
   return (
     <div className="container">
@@ -36,7 +45,9 @@ const HomeSide = () => {
       </div>
 
       <div className="secondSlide">
-       {open ?  <Form func = {handleSignup} /> : <SignUp func = {handleSignin}/>}
+       {open ?  <Form func = {handleSignup} /> : <AddTask func = {handleSignin}/> && open ?  <Form func = {handleSignup} /> : <Register func = {handleSignin}/>}
+       {/* {show ?  <Form func = {handleRegister} /> : <Register reg = {handleSignin}/>} */}
+       {/* <Register reg = {}/> */}
       </div>
     </div>
   );

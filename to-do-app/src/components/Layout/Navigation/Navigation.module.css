@@ -11,7 +11,7 @@
 
 .container > ul > li > a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: aliceblue;
     margin-right: 40px;
     transition: 1s all ease-in;
@@ -19,13 +19,28 @@
 
 .container > a {
     text-decoration: none;
-    font-size:  40px;
+    font-size:  30px;
     color: aliceblue;
 }
 
 .container > ul {
     display: flex;
     list-style: none;
+}
+
+@media (min-width: 768px){
+    .container > a {
+        text-decoration: none;
+        font-size:  40px;
+        color: aliceblue;
+    }
+    .container > ul > li > a{
+        text-decoration: none;
+        font-size: 20px;
+        color: aliceblue;
+        margin-right: 40px;
+        transition: 1s all ease-in;
+    }
 }
 
 
