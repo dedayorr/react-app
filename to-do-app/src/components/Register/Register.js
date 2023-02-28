@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./Register.css"
 
-const Register = ({}) => {
+const Register = ({func}) => {
   const [state, setState] = useState({
     firstame: "",
     lastname: "",
@@ -140,7 +141,8 @@ const Register = ({}) => {
           onChange={handleChange}
         />
 
-<button>Submit</button>
+<button className="btn-two">Submit</button>
+<div className='regLink' onClick={() => func(true)}>Already have an account? Login</div>
       </form>
       
     </div>

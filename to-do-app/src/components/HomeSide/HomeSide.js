@@ -45,7 +45,7 @@ const HomeSide = () => {
       </div>
 
       <div className="secondSlide">
-       {open ?  <Form func = {handleSignup} /> : <AddTask func = {handleSignin}/> && open ?  <Form func = {handleSignup} /> : <Register func = {handleSignin}/>}
+       {open ?  <Form func = {handleSignup} /> : <Register func = {handleSignin}/>}
        {/* {show ?  <Form func = {handleRegister} /> : <Register reg = {handleSignin}/>} */}
        {/* <Register reg = {}/> */}
       </div>

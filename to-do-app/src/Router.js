@@ -15,8 +15,8 @@ export const Router = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tasks" element={<Alltasks />} />
-        <Route path="/task/:id" element={<Tasks />} />
+        {/* <Route path="/tasks" element={<Alltasks />} /> */}
+        <Route path="/tasks" element={<Tasks />} />
         <Route path="/task/:id/edit" element={<Edittasks />} />
         <Route path="/register" element={<Register />} />
         <Route path="/not-found" element={<Notfound />} />

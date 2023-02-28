@@ -1,4 +1,5 @@
-.btn-two{
+.btn-four{
+    color: white;
     width: 50%;
     height: 30px;
     margin: 0 auto;
@@ -7,13 +8,15 @@
     border: none;
     background: rgb(41,18,154);
     background: linear-gradient(270deg, rgba(41, 18, 154, 0.698) 34%, rgba(251,221,166,1) 90%);
+    margin: 20px;
 }
 
-@media (min-width: 768px){
-    .btn-two{
+@media (min-width:789px){
+    .btn-four{
         margin-top: 20px;
         height: 50px;
         font-size: 20px;
         color: white;
+        width: 200px;
     }
 }
