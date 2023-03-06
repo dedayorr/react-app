@@ -1,28 +1,29 @@
-form{
+.formed{
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 85%;
+    width: 90%;
     margin: 50px auto;
     gap: 20px;
     padding: 0% 3% 20%;
-    margin-bottom: 20%;
+    /* margin-bottom: 20%; */
     background-color: white;
 }
 
-form > p {
+.formed > p {
     font-size: 50px;
     text-align: center;
 }
 
 input{
-    height: 25px;
+    height: 35px;
     border-radius: 10px;
     border: 1px solid;
     padding: 1%;
 }
 
 .btn{
+    color: white;
     width: 50%;
     height: 30px;
     margin: 0 auto;
@@ -40,17 +41,17 @@ input{
     font-size:20px;
 }
 .regLink:hover{
-   
     color: blue;
 }
 
 @media (min-width: 768px){
-    form{
-        width: 60%;
+    .formed{
+        width: 80%;
+        margin: 10% auto;
     }
 
     input{
-        height: 30px;
+        height: 40px;
         border-radius: 10px;
         border: 1px solid;
         padding: 1%;

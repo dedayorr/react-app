@@ -7,11 +7,13 @@
     height:30px;
     color: aliceblue;
     padding: 3%;
+    position: sticky;
+    top: 0;
 }
 
 .container > ul > li > a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     color: aliceblue;
     margin-right: 40px;
     transition: 1s all ease-in;
@@ -19,7 +21,7 @@
 
 .container > a {
     text-decoration: none;
-    font-size:  30px;
+    font-size:  35px;
     color: aliceblue;
 }
 

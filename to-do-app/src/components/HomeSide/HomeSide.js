@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import "./HomeSide.css";
 import Form from "../Form/Form";
-import { AddTask} from "../AddTask/AddTask";
+// import { AddTask} from "../AddTask/AddTask";
 import Register from "../Register/Register";
 
 const HomeSide = () => {

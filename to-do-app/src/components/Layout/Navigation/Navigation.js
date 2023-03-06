@@ -14,7 +14,7 @@ const Navigation = () => {
           <Link to="/tasks">Tasks</Link>
         </li>
         <li>
-          <Link to="/register">Register</Link>
+          {/* <Link to="/register">Register</Link> */}
         </li>
       </ul>
     </div>

@@ -12,11 +12,11 @@
 }
 
 .firstSlide{
-    flex: 1.2;
-    margin: 5% 10%;
+    flex: 1;
+    margin: 5% 15%;
 }
 
 .secondSlide{
-    flex: 2;
+    flex: 1.5;
 }
 }

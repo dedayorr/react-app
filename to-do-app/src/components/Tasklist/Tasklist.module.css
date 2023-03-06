@@ -1,0 +1,7 @@
+@media (min-width: 786px){
+    .tasklist{
+    display: flex;
+    /* background-color: red; */
+    /* width: 90%; */
+}
+}

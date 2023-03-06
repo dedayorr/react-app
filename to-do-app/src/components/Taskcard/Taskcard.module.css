@@ -1,0 +1,36 @@
+.cover{
+    padding: 2%;
+}
+
+.card{
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.468) 0px 3px 8px;
+    padding: 2%;
+    background: white;
+    height: 300px;
+}
+
+.card > div > h1 {
+    color: rgba(41, 18, 154, 0.698);
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.subicon{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+
+@media (min-width: 789px){
+    .card{
+        width: 300px;
+    }
+}
+

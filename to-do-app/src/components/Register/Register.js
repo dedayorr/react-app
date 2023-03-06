@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Register.css"
+import styles from "./Register.module.css";
 
-const Register = ({func}) => {
+const Register = ({ func }) => {
   const [state, setState] = useState({
     firstame: "",
     lastname: "",
@@ -40,8 +40,8 @@ const Register = ({func}) => {
   }
   return (
     <div>
-      <form>
-<p>REGISTER</p>
+      <form className={styles.formed}>
+        <p>REGISTER</p>
         <input
           type="text"
           name="firstName"
@@ -131,20 +131,30 @@ const Register = ({func}) => {
             checked={gender === "Other"}
           />
         </div>
-       <label htmlFor="bio">Bio</label>
-       <textarea id="bio" name="bio" value={bio} onChange={handleChange} cols="120" rows="10" placeholder="Write about yourself"/>
+        <label htmlFor="bio">Bio</label>
+        <textarea
+          id="bio"
+          name="bio"
+          value={bio}
+          onChange={handleChange}
+          cols="120"
+          rows="10"
+          placeholder="Write about yourself"
+        />
         <input
-        multiple
+          multiple
           type="file"
           name="file"
           value={fileName}
           onChange={handleChange}
         />
 
-<button className="btn-two">Submit</button>
-<div className='regLink' onClick={() => func(true)}>Already have an account? Login</div>
+        <button className={styles.btn_two}>Submit</button>
+        <div className={styles.regLink}
+         onClick={() => func(true)}>
+          Already have an account? Login
+        </div>
       </form>
-      
     </div>
   );
 };
