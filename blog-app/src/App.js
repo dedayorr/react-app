@@ -3,7 +3,7 @@ import { Router } from './Router';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-[#FFF2F2]">
      <Router/>
     </div>
   );
