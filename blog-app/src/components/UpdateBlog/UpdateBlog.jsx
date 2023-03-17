@@ -1,32 +1,30 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import Spinner from "../Spinner/Spinner";
 import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 
-export const Addblog = ({ setBlogOpen }) => {
-  const InputRef = useRef(null);
+export const UpdateBlog = ({ setBlogOpen, setUpdateOpen, id }) => {
+  console.log(id);
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState({
     title: "",
-    image:"",
+    image: "",
     desc: "",
     date: "",
-    
   });
   const { title, image, desc, date } = state;
-  console.log(state)
-  
+  console.log(state);
   function submitHandler(e) {
     e.preventDefault();
-    const { title, image, desc, date  } = state;
-    if (title === "" ||  image === "" || desc === "" || date === "") {
+    const { title, image, desc, date } = state;
+    if (title === "" || image === "" || desc === "" || date === "") {
       toast.warning("All field is required");
       return;
     }
 
     setLoading(true);
-    const data = { id: uuidv4(), title, image, desc, date,  };
+    const data = { id: uuidv4(), title, image, desc, date };
 
     setTimeout(() => {
       const blogs = localStorage.getItem("blogs")
@@ -37,9 +35,8 @@ export const Addblog = ({ setBlogOpen }) => {
       setLoading(false);
       toast.success("Blog successfully added");
       setBlogOpen(false);
-      console.log(blogs)
+      console.log(blogs);
     }, 3000);
-    
   }
 
   function changeHandler(e) {
@@ -50,7 +47,6 @@ export const Addblog = ({ setBlogOpen }) => {
     });
   }
 
-  
   return (
     <div>
       <form
@@ -60,7 +56,7 @@ export const Addblog = ({ setBlogOpen }) => {
         <div
           className="absolute left-[325px] bottom-[97%] text-3xl text-[#f3f3f4] md:left-[98%]"
           onClick={() => {
-            setBlogOpen(false);
+            setUpdateOpen(false);
           }}
         >
           <AiFillCloseCircle />
