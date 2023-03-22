@@ -5,7 +5,7 @@ import {FiDelete} from "react-icons/fi"
 export const Cart = () => {
   const { cartItems } = useContext(ContextProvider);
   return (
-    <div>
+    <div className="md:mt-[20px] border md:w-[80%] md:float-right md:mr-[20px] md:mb-[20px]">
       {cartItems && cartItems.length > 0 ? (
         cartItems.map((books) => (
           <div key={books.id} className="mb-[20px] w-[90%] mx-auto">
