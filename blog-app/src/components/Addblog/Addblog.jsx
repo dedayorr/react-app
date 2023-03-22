@@ -16,7 +16,7 @@ export const Addblog = ({ setBlogOpen }) => {
   });
   const { title, image, desc, date } = state;
   console.log(state)
-  
+
   function submitHandler(e) {
     e.preventDefault();
     const { title, image, desc, date  } = state;
@@ -102,7 +102,7 @@ export const Addblog = ({ setBlogOpen }) => {
         ) : (
           <button
             type="submit"
-            className="w-[25%] mx-auto text-[#FFF2F2] bg-[#e5e0ffe8] p-[2%] rounded-md hover:bg-[#91a4f1c6]"
+            className="w-[25%] mx-auto text-[#faf7f7] bg-[#4e66c3] p-[2%] rounded-md hover:bg-[#91a4f1c6]"
           >
             Add
           </button>

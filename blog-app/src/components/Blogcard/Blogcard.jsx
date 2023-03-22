@@ -6,7 +6,7 @@ import { BsFillShareFill } from "react-icons/bs";
 export const Blogcard = ({ blog, getBlogs, setUpdateOpen, collectId }) => {
   function truncate(str, num) {
     if (str.length > num) {
-      str = str.substring(0, num) + " Read more...";
+      str = str.substring(0, num) + "...";
     }
     return str;
   }
@@ -38,7 +38,7 @@ export const Blogcard = ({ blog, getBlogs, setUpdateOpen, collectId }) => {
   return (
     <div
       style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
-      className="flex flex-col justify-between p-[20px] bg-[#4e65c34e] mt-[6%] h-[450px] w-[300px] gap-[3px]"
+      className="flex flex-col justify-between p-[20px] bg-[#4e65c34e] mt-[6%] h-[450px] w-[300px] gap-[3px] mx-auto"
     >
       <h1 className="text-[#4e66c3] font-bold text-xl hover:ring-blue-700">
         {truncate(blog.title, 30)}

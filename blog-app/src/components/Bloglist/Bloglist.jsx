@@ -1,8 +1,5 @@
 import React from "react";
 import { Blogcard } from "../Blogcard/Blogcard";
-// import { FaRegEdit } from "react-icons/fa";
-// import { MdDelete } from "react-icons/md";
-// import { BsFillShareFill } from "react-icons/bs";
 
 export const Bloglist = ({ blogs, getBlogs, setUpdateOpen, collectId }) => {
   function truncate(str, num) {
@@ -11,7 +8,7 @@ export const Bloglist = ({ blogs, getBlogs, setUpdateOpen, collectId }) => {
     }
   }
   return (
-    <div className="md:flex md:flex-wrap justify-center gap-[30px] w-[90%] mx-auto ">
+    <div className="md:flex md:flex-wrap justify-center items-center gap-[30px] w-[90%] mx-auto ">
       {blogs && blogs.length > 0 ? (
       blogs.map((blog) => <Blogcard key={blog.id} blog={blog} getBlogs={getBlogs} setUpdateOpen={setUpdateOpen} collectId={collectId}/>)
       ) : (

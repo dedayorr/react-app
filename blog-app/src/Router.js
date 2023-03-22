@@ -13,6 +13,7 @@ export const Router = () => {
     <div className="flex flex-col justify-between ">
       <Navigation />
       <Routes>
+        
         <Route path="/" element={<Home />} />
         <Route path="/blogpage" element={<Blog />} />
         <Route path="/storepage" element={<Store />} />

@@ -14,7 +14,7 @@ export const UpdateBlog = ({ setBlogOpen, setUpdateOpen, id }) => {
     date: "",
   });
   const { title, image, desc, date } = state;
-  console.log(state);
+  // console.log(state);
   function submitHandler(e) {
     e.preventDefault();
     const { title, image, desc, date } = state;
@@ -24,19 +24,20 @@ export const UpdateBlog = ({ setBlogOpen, setUpdateOpen, id }) => {
     }
 
     setLoading(true);
-    const data = { id: uuidv4(), title, image, desc, date };
+    
+    // const data = { id: uuidv4(), title, image, desc, date };
 
-    setTimeout(() => {
-      const blogs = localStorage.getItem("blogs")
-        ? JSON.parse(localStorage.getItem("blogs"))
-        : [];
-      const blogCopy = [...blogs, data];
-      localStorage.setItem("blogs", JSON.stringify(blogCopy));
-      setLoading(false);
-      toast.success("Blog successfully added");
-      setBlogOpen(false);
-      console.log(blogs);
-    }, 3000);
+    // setTimeout(() => {
+    //   const blogs = localStorage.getItem("blogs")
+    //     ? JSON.parse(localStorage.getItem("blogs"))
+    //     : [];
+    //   const blogCopy = [...blogs, data];
+    //   localStorage.setItem("blogs", JSON.stringify(blogCopy));
+    //   setLoading(false);
+    //   toast.success("Blog successfully added");
+    //   setBlogOpen(false);
+    //   console.log(blogs);
+    // }, 3000);
   }
 
   function changeHandler(e) {
