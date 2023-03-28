@@ -7,6 +7,7 @@ import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import {AiOutlineArrowRight} from "react-icons/ai"
+import ScrollToTop from "react-scroll-to-top";
 
 export const Home = () => {
   const [blogOpen, setBlogOpen] = useState(false);
@@ -333,13 +334,12 @@ export const Home = () => {
 
       {blogOpen && (
         <Modal>
-          <Addblog setBlogOpen={setBlogOpen} />
+          <Addblog setBlogOpen={setBlogOpen} getBlogs={getBlogs}/>
         </Modal>
       )}
 
       {updateOpen && (
         <Modal>
-          const [identity, setIdentity] = useState(null)
           <UpdateBlog setUpdateOpen={setUpdateOpen} id={identity} />
         </Modal>
       )}
@@ -582,7 +582,7 @@ export const Home = () => {
         </div>
 
         <Link className="hover:text-blue-500 text-2xl flex justify-center items-center gap-3 mb-[20px]" to="/storepage">CLICK HERE TO BUY BOOKS <AiOutlineArrowRight/></Link>
-        
+       <div className="flex mx-auto justify-center items-center bg-blue-600" > <ScrollToTop smooth/></div>
       </div>
     </>
   );

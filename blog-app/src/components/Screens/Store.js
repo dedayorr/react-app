@@ -244,6 +244,7 @@ export const Store = () => {
         <BsCart4 />
         Cart
       </button>
+      
       {openCart && <Cart/>}
 
       <div className="flex flex-col gap-[15px] md:flex md:flex-row md:mt-[100px] md:w-[60%] md:ml-[1%] md:text-xl  ">

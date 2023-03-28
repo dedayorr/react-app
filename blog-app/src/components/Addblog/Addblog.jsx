@@ -4,7 +4,7 @@ import Spinner from "../Spinner/Spinner";
 import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 
-export const Addblog = ({ setBlogOpen }) => {
+export const Addblog = ({ setBlogOpen, getBlogs }) => {
   const InputRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [state, setState] = useState({
@@ -37,7 +37,8 @@ export const Addblog = ({ setBlogOpen }) => {
       setLoading(false);
       toast.success("Blog successfully added");
       setBlogOpen(false);
-      console.log(blogs)
+      // console.log(blogs)
+      getBlogs()
     }, 3000);
     
   }

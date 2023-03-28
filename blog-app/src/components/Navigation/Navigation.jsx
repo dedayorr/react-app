@@ -29,7 +29,7 @@ export const Navigation = () => {
           <AiFillTwitterCircle />
         </div>
       </div>
-      <div className=" bg-[#7286D3] flex justify-between p-[5%] md:p-[1%] md: ">
+      <div className=" bg-[#006] flex justify-between p-[5%] md:p-[1%] md: ">
         <div className="flex justify-center items-center gap-[10px] text-[#f0e8e8] md:ml-[3%]">
           <div className="text-5xl">
             <FaBlog />

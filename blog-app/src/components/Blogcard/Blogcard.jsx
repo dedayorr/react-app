@@ -38,7 +38,7 @@ export const Blogcard = ({ blog, getBlogs, setUpdateOpen, collectId }) => {
   return (
     <div
       style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
-      className="flex flex-col justify-between p-[20px] bg-[#4e65c34e] mt-[6%] h-[450px] w-[300px] gap-[3px] mx-auto"
+      className="flex flex-col justify-between p-[20px] bg-[#010101f5] mt-[6%] h-[450px] w-[300px] gap-[3px] mx-auto rounded-2xl"
     >
       <h1 className="text-[#4e66c3] font-bold text-xl hover:ring-blue-700">
         {truncate(blog.title, 30)}
@@ -47,7 +47,7 @@ export const Blogcard = ({ blog, getBlogs, setUpdateOpen, collectId }) => {
         <img className="h-[150px] " src={blog.image} alt="" />
         <p className="text-[#FFF2F2]">{truncate(blog.desc, 100)}</p>
       </div>
-      <p>Added by dedayorr</p>
+      <p className="text-[#fbfafa5e]">Added by dedayorr</p>
       <div className="text-[#4e66c3]">{blog.date}</div>
       <div className="flex justify-between mt-[20px]">
         <div className="flex justify-between w-[20%] text-xl text-[#4e66c3]">
