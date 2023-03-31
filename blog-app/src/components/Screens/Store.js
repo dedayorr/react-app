@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { BsCart4 } from "react-icons/bs";
@@ -9,11 +9,15 @@ import { Cart } from "../Cart/Cart";
 import { ContextProvider } from "../Context";
 
 export const Store = () => {
-  const {addCart} = useContext(ContextProvider)
+  const {addToCart, cartBooks, getBooks} = useContext(ContextProvider)
+  console.log(cartBooks)
   const [newArrival, setnewArrival] = useState(null);
   const [shipping, setShipping] = useState(false);
   const [openCart, setopenCart] = useState(false);
   // const [cartItems, setCartItems] = useState([]);
+  useEffect(()=>{
+    getBooks()
+      },[])
 
   const Books = [
     {
@@ -242,6 +246,7 @@ export const Store = () => {
 
       <button onClick={()=>setopenCart((prev)=>!prev)} className="flex text-[#faf7f7] bg-[#4e66c3] p-[10px] mx-auto w-[90%] justify-center items-center text-2xl mt-[10px] mb-[10px] gap-[10px] md:w-[25%] md:text-4xl md:float-right md:mr-5 hover:bg-[#91a4f1c6]">
         <BsCart4 />
+        <span className="ml-[-18px] mb-[15px] text-sm bg-black rounded-lg p-[3px]" >{cartBooks.length}</span>
         Cart
       </button>
       
@@ -285,7 +290,7 @@ export const Store = () => {
                 <div>Title: {items.title}</div>
                 <div>Price: ₦{items.price}</div>
                 <div className="text-sm">Free delivery nation wide</div>
-                <button className="text-[#faf7f7] bg-[#4e66c3] p-[1%] hover:bg-[#91a4f1c6]" onClick={()=>addCart(items)}>
+                <button className="text-[#faf7f7] bg-[#4e66c3] p-[1%] hover:bg-[#91a4f1c6]" onClick={()=>addToCart(items)}>
                   Add To Cart
                 </button>
 

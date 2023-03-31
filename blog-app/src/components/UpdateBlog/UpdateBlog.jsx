@@ -14,18 +14,20 @@ export const UpdateBlog = ({ setBlogOpen, setUpdateOpen, id }) => {
     date: "",
   });
   const { title, image, desc, date } = state;
-  // console.log(state);
+  
+
+
   function submitHandler(e) {
     e.preventDefault();
     const { title, image, desc, date } = state;
-    if (title === "" || image === "" || desc === "" || date === "") {
-      toast.warning("All field is required");
-      return;
-    }
+    // if (title === "" || image === "" || desc === "" || date === "") {
+    //   toast.warning("All field is required");
+    //   return;
+    // }
 
     setLoading(true);
     
-    // const data = { id: uuidv4(), title, image, desc, date };
+    const data = { id: uuidv4(), title, image, desc, date };
 
     // setTimeout(() => {
     //   const blogs = localStorage.getItem("blogs")
@@ -101,7 +103,7 @@ export const UpdateBlog = ({ setBlogOpen, setUpdateOpen, id }) => {
             type="submit"
             className="w-[25%] mx-auto text-[#FFF2F2] bg-[#e5e0ffe8] p-[2%] rounded-md hover:bg-[#91a4f1c6]"
           >
-            Add
+          Update
           </button>
         )}
       </form>

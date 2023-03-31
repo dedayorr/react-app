@@ -1,42 +1,78 @@
-import React, {createContext, useState, useEffect} from 'react'
+import React, { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export const ContextProvider = createContext();
 
-export const Context = ({children}) => {
-    const [cartItems, setCartItmes] = useState([])
-    const [render, setRender] = useState(false)
+export const Context = ({ children }) => {
+  const [cartItems, setCartItmes] = useState([]);
+  const [cartBooks, setCartBooks] = useState([]);
 
-    useEffect(()=>{
-        const getBook = JSON.parse(localStorage.getItem("books"))
-        setCartItmes(getBook)
-    },[render])
+  function addToCart(items) {
+    const { id, title, img, price } = items;
+    const data = { id, title, img, price, qty: 1 };
 
-function addCart(item){
-    const getBooks = JSON.parse(localStorage.getItem("books")) ||[]
-    const bookExist = getBooks.find((books)=> item.id === books.id)
-    if(bookExist){
-        const updateBook = getBooks.map((book)=> item.id === book.id ? {...book, qty: book.qty+1} : book);
-        localStorage.setItem("books",JSON.stringify(updateBook))
-        setCartItmes(updateBook)
+    const fetchBooks = localStorage.getItem("books")
+      ? JSON.parse(localStorage.getItem("books"))
+      : [];
+    const bookExist = fetchBooks.find((books) => books.id === id);
+    if (bookExist) {
+      alert("Book already added");
+    } else {
+      const fetchBooksCopy = [...fetchBooks, data];
+      localStorage.setItem("books", JSON.stringify(fetchBooksCopy));
     }
-    else{
-        const updateBook = [...getBooks, {...item,qty:1}];
-        localStorage.setItem("books",JSON.stringify(updateBook))
-        setCartItmes(updateBook)
+    getBooks();
+  }
 
-    }
-    setRender(true);
-}
-const hold = {
-    addCart,
-    cartItems,
-}
+  const getBooks = () => {
+    const gottenBooks = JSON.parse(localStorage.getItem("books"));
+    setCartBooks(gottenBooks);
+  };
+
+  const addButton =(books)=>{
+    const bookData = JSON.parse(localStorage.getItem("books"))
+    const findBook = bookData.find((item)=>item.id === books.id);
+    findBook.qty = findBook.qty + 1;
+
+    localStorage.setItem("books", JSON.stringify(bookData))
+    getBooks()
+  }
+
+  const substractButton =(books)=>{
+    const bookData = JSON.parse(localStorage.getItem("books"))
+    const findBook = bookData.find((item)=>item.id === books.id);
+    findBook.qty = findBook.qty - 1;
+
+    localStorage.setItem("books", JSON.stringify(bookData))
+    getBooks()
+  }
+
+  const totalPrice = cartBooks.reduce((price, item)=> price + item.price * item.qty, 0 )
+
+  const deleteBook = (books)=>{
+    const bookData = JSON.parse(localStorage.getItem("books"))
+    const filterBooks = bookData.filter((item)=>item.id !== books.id);
+    localStorage.setItem("books", JSON.stringify(filterBooks))
+    window.confirm("Are you sure you want to remove")
+    getBooks()
+
+  }
+
+  const hold = {
+    addToCart,
+    getBooks,
+    cartBooks,
+    addButton,
+    substractButton,
+    totalPrice,
+    deleteBook
+  };
 
   return (
     <div>
-        <ContextProvider.Provider value={hold}>
-            {children}
-            </ContextProvider.Provider>
+      <ContextProvider.Provider value={hold}>
+        {children}
+      </ContextProvider.Provider>
     </div>
-  )
-}
+  );
+};
