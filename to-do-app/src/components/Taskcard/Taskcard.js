@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import styles from "./Taskcard.module.css";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaEdit } from "react-icons/fa";
 import { BsShareFill } from "react-icons/bs";
 
 function Taskcard({ task }) {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
   const truncate = (str, num) => {
     if (str.length > num) {
       if (str.length > num) {
@@ -18,8 +18,8 @@ function Taskcard({ task }) {
     <div className={styles.cover}>
       <div className={styles.card}>
         <div>
-          <h1>{task.title}</h1>
-          <p>{task.desc}</p>
+          <h1>{truncate(task.title, 20)}</h1>
+          <p>{truncate(task.desc, 300)}</p>
           <p>{task.date}</p>
         </div>
 
